@@ -3,7 +3,11 @@
 #include <locale.h>
 #include <math.h>
 
-float function(float a);
+float function(float a) {
+	float b;
+	b = pow(2, a) - pow(2 * a, 2) - 1;
+	return b;
+}
 
 int main() {
 
@@ -38,10 +42,4 @@ int main() {
 		printf("Имя массива = 'M' | Накопленное значение положительных элементов массива = %f | Накопленное значение отрицательных элементов массива = %f | Число положительных значений = %f | Число отрицательных значений = %f | Среднее значение всех положительных элементов массива = %f ", accumPositive, accumNegative, numberPos, numberNeg, accumPositive / numberPos);
 	}
 	
-}
-
-float function(float a) {
-	float b;
-	b = pow(2, a) - pow(2 * a, 2) - 1;
-	return b;
 }
